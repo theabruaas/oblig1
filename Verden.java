@@ -12,9 +12,11 @@ public class Verden{
     }
     
     public void tegn(){
+        System.out.println(" ");
+        System.out.println("Generasjon nr: " + genNr);
         rutenett.tegnRutenett();
-        System.out.println(genNr);
-        System.out.println(rutenett.antallLevende());
+        System.out.println("Det er " + rutenett.antallLevende() + " levende celler.");
+        System.out.println(" ");
     }
 
     public void oppdatering(){

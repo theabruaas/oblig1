@@ -46,9 +46,7 @@ public class Rutenett {
                 System.out.print(rutene[i][j].hentStatusTegn() + " ");
             }
         }
-        System.out.println();
-        System.out.println();
-
+        System.out.println("");
      }
 
      public void settNaboer(int rad, int kolonne){
