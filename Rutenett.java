@@ -35,7 +35,7 @@ public class Rutenett {
             return null;
         }
         else {
-        return rutene[rad][kolonne];
+            return rutene[rad][kolonne];
         }
      }
 
@@ -46,19 +46,25 @@ public class Rutenett {
                 System.out.print(rutene[i][j].hentStatusTegn() + " ");
             }
         }
+        System.out.println();
+        System.out.println();
+
      }
 
      public void settNaboer(int rad, int kolonne){
         Celle nabo = new Celle();
         Celle hoved = new Celle();
+        int teller = 0;
         hoved = rutene[rad][kolonne];
         for (int i = -1; i < 2; i++){
             for (int j = -1; j < 2; j++){
-                nabo = rutene[rad+i][kolonne+j];
-                if (nabo != null || nabo != hoved){
+                nabo = hentCelle(rad+1, rad+1);
+                if (!nabo.equals(null) || !nabo.equals(hoved)){
                     hoved.leggTilNabo(nabo);
+                    teller++;
                 }
             }
+            System.out.println(teller);
         }
      }
 
