@@ -58,13 +58,14 @@ public class Rutenett {
         hoved = rutene[rad][kolonne];
         for (int i = -1; i < 2; i++){
             for (int j = -1; j < 2; j++){
-                nabo = hentCelle(rad+1, rad+1);
-                if (!nabo.equals(null) || !nabo.equals(hoved)){
+                nabo = hentCelle(rad+i, rad+i);
+                if (nabo != null){
+                    if (nabo != rutene[rad][kolonne]){
                     hoved.leggTilNabo(nabo);
                     teller++;
+                    }
                 }
             }
-            System.out.println(teller);
         }
      }
 
