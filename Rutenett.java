@@ -54,7 +54,6 @@ public class Rutenett {
      public void settNaboer(int rad, int kolonne){
         Celle nabo = new Celle();
         Celle hoved = new Celle();
-        int teller = 0;
         hoved = rutene[rad][kolonne];
         for (int i = -1; i < 2; i++){
             for (int j = -1; j < 2; j++){
@@ -62,7 +61,6 @@ public class Rutenett {
                 if (nabo != null){
                     if (nabo != rutene[rad][kolonne]){
                     hoved.leggTilNabo(nabo);
-                    teller++;
                     }
                 }
             }
