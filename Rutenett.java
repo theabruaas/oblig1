@@ -73,7 +73,6 @@ public class Rutenett {
         for(int i = 0; i < antRader; i++){
             for (int j = 0; j < antKolonner; j++){
                 settNaboer(i,j);
-                //rutenett(i, j);
             }
         }
      }
