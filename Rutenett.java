@@ -31,9 +31,12 @@ public class Rutenett {
      }
 
      public Celle hentCelle(int rad, int kolonne){
-        System.out.println(rad);
-        System.out.println(kolonne);
+        if (rad < 0 || rad >= antRader || kolonne < 0 || kolonne >= antKolonner){
+            return null;
+        }
+        else {
         return rutene[rad][kolonne];
+        }
      }
 
      public void tegnRutenett(){
