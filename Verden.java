@@ -15,15 +15,15 @@ public class Verden{
         System.out.println(" ");
         System.out.println("Generasjon nr: " + genNr);
         rutenett.tegnRutenett();
-        System.out.println("Det er " + rutenett.antallLevende() + " levende celler.");
+        System.out.println("Det er " + rutenett.antallLevende() + " levende celler");
         System.out.println(" ");
     }
 
     public void oppdatering(){
         for (int i = 0; i < rad; i++){
             for (int j = 0; j < kolonne; j++){
-                rutenett.settNaboer(i, j);
-                rutenett.antallLevende();
+                //rutenett.settNaboer(i, j);
+                rutenett.hentCelle(i, j).tellLevendeNaboer();
             }
         }
         for (int k = 0; k < rad; k++){
